@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pulimamidi Srinath Goud | Portfolio</title>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 1000, once: true });
+
+      // Animate skill bars
+      const fills = document.querySelectorAll('.fill');
+      fills.forEach(fill => {
+        const width = fill.getAttribute('data-width');
+        fill.style.width = width;
+      });
+    });
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #2c3e50;
+      padding: 1rem;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+    .hero img {
+      width: 150px; height: 150px;
+      border-radius: 50%; border: 4px solid #fff;
+      object-fit: cover; margin-bottom: 1rem;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1rem; margin-bottom: 1rem; }
+    .social-links a {
+      margin: 0 10px; color: white;
+      text-decoration: none; font-size: 1.2rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-bottom: 1rem; color: #222;
+    }
+    .card ul {
+      line-height: 1.8; padding-left: 1.2rem;
+    }
+    .card p {
+      margin-bottom: 1rem;
+    }
+
+    .contact a {
+      color: #0066cc; text-decoration: none;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #4ca1af;
+    }
+
+    .bar {
+      background: #e0e0e0;
+      border-radius: 25px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    .fill {
+      background: #2c3e50;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 25px 0 0 25px;
+      width: 0;
+      transition: width 2s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.5rem; }
+      .hero p { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#volunteering">Volunteering</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" data-aos="fade-down">
+    <img src="C:\Users\AULoaner\Desktop\chanti.jpeg" alt="Pulimamidi Srinath Goud">
+    <h1>Pulimamidi Srinath Goud</h1>
+    <p>System Engineer </p>
+    <div class="social-links">
+      <a href="mailto:pulimamidisrinath123@gmail.com">📧</a>
+      <a href="https://linkedin.com/in/srinathgoud" target="_blank">🔗</a>
+      <a href="https://github.com/srinathchanti" target="_blank">💻</a>
+    </div>
+    <div style="margin-top: 1rem;">
+      <a href="C:\Users\AULoaner\Desktop\SrinathGoud.pdf" download style="background:#fff;color:#2c3e50;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">
+        📄 Download Resume
+      </a>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="card" id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>A proactive and results-driven IT professional with hands-on experience in systems engineering and technical support. Skilled in troubleshooting, managing IT assets, and optimizing network infrastructure to ensure seamless operations.</p>
+    </div>
+
+    <div class="card" id="education" data-aos="fade-left">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>University Of The Pacific</strong> – Master’s in Computer Science (Aug 2024 – Present)</li>
+        <li><strong>JPN College of Engineering</strong> – Bachelor’s in Computer Science (Jul 2018 – Sep 2022)</li>
+      </ul>
+    </div>
+
+    <div class="card" id="experience" data-aos="zoom-in">
+      <h2>Experience</h2>
+      <ul>
+        <li>System Engineer – Precision Group (May 2022 – July 2024)</li>
+        <li>Deployed and maintained Windows servers, QMS, and ERP systems</li>
+        <li>Configured monitoring tools and analyzed network traffic</li>
+        <li>Led asset management initiatives, upgraded infrastructure with Cisco routers</li>
+      </ul>
+    </div>
+
+    <div class="card" id="projects" data-aos="fade-right">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Ravi Tiffin Center Website:</strong> Developed a full-stack website for a local tiffin business featuring a digital menu, daily item updates, order count input on click, and a clean mobile-friendly design using HTML, CSS, JavaScript, and backend integration. <a href="https://srinathchanti.github.io/Ravi-kumar/" target="_blank">View my website</a>.</li>
+        <li><strong>Debian Linux:</strong> Maintained packages, resolved bugs, contributed to system stability.</li>
+        <li><strong>Precision IT:</strong> Oversaw asset tracking, network upgrades, and proactive monitoring.</li>
+        <li><strong>AI Face Recognition Security System:</strong> Developed a smart security solution using AI to match uploaded images with stored face data. Includes real-time access logging, Flask backend, OpenCV image processing, and a responsive web interface. Ideal for offices, smart homes, and personal security projects.</li>
+      </ul>
+    </div>
+
+    <div class="card" id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+
+      <label>Python</label>
+      <div class="bar"><div class="fill" data-width="90%">90%</div></div>
+
+      <label>Linux (Debian/Ubuntu/Kali)</label>
+      <div class="bar"><div class="fill" data-width="85%">85%</div></div>
+
+      <label>Networking & Troubleshooting</label>
+      <div class="bar"><div class="fill" data-width="80%">80%</div></div>
+
+      <label>Cybersecurity</label>
+      <div class="bar"><div class="fill" data-width="75%">75%</div></div>
+
+      <label>Salesforce</label>
+      <div class="bar"><div class="fill" data-width="70%">70%</div></div>
+    </div>
+
+    <div class="card" id="certifications" data-aos="fade-left">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Cybersecurity – Cisco</li>
+        <li>Python – Cisco</li>
+        <li>Salesforce Badges</li>
+      </ul>
+    </div>
+
+    <div class="card" id="volunteering" data-aos="zoom-in">
+      <h2>Volunteering</h2>
+      <ul>
+        <li>Promoted open-source Debian with Swecha – revitalized old school computers.</li>
+        <li>COVID-19 Medical Helpline – offered support and critical information.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
